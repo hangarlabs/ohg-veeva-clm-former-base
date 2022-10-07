@@ -1,0 +1,15 @@
+#gobal-isi {
+	bottom: 5px;
+	left: 75px;
+	position: absolute;
+	width: 782px;
+	z-index: 11;
+
+  .isi-scroll {
+    height: 145px;
+    overflow-y: scroll;
+    padding-right: 15px;
+    width: 100%;
+    @include scrollBar();  
+  }
+}

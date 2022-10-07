@@ -1,0 +1,233 @@
+.patient-profile {
+
+   .global-content {
+      overflow: hidden;
+   }
+
+   .header-title {
+      margin-top: 14px;
+      &.double {
+         margin-top: 0;
+      }
+   }
+
+   .person-column {
+      position: relative;
+      width: 65%;
+   }
+
+   .person-background img {
+      position: absolute;
+   }
+
+   .patient-category {
+      color: $color-white;
+      font-size: 10px;
+      left: 30px;
+      position: absolute;
+      top: 378px;
+   }
+
+   .break {
+      display: block;
+      margin: -6px 0 0 19px;
+   }
+
+   .text-content {
+      position: absolute;
+      top: 89px;
+      left: 620px;
+      width: 270px;
+   }
+
+   .legend-bold {
+      font-family: $font-avenirnext-medium;
+   }
+
+   .divider {
+      background-color: #116bb5;
+      width: 96%;
+      margin: 13px 0 11px 3px;
+      border: none;
+      height: 1px;
+   }
+
+   .study-container {
+      padding: 3px 0 0 2px;
+   }
+
+   #tab-item-0-section,
+   #tab-item-1-section,
+   #tab-item-4-section {
+      .wrapper {
+         display: flex;
+      }
+
+      .person-info {
+         background-color: $color-blue-primary;
+         border-radius: 19px;
+         padding: 10px 0 0 110px;
+         position: absolute;
+
+         p {
+            color: $color-white;
+            font-family: $font-avenirnext-medium;
+         }
+      }
+
+      .person-info-header {
+         font-size: 22.4px;
+         margin: 9px 0 0 87px;
+      }
+
+      .divider {
+         border: 1px solid $color-white;
+         margin-top: 11px;
+         width: 92%;
+      }
+
+      .person-info-list {
+         list-style: none;
+         margin: 13px 0 0 89px;
+         li {
+            display: flex;
+            margin-bottom: 4px;
+            &:before {
+               content: "• ";
+               color: $color-white;
+               margin-right: 4px;
+               margin-top: -2px;
+            }
+         }
+      }
+
+      .small-title {
+         font-family: $font-avenirnext-medium;
+         font-size: 17.5px;
+         color: $color-blue-primary;
+      }
+
+      .big-title, .quote-text {
+         color: $color-blue-primary;
+         font-family: $font-avenirnext-medium;
+         font-size: 24.44px;
+         line-height: 30px;
+      }
+
+      .custom-list {
+         li {
+            display: flex;
+         }
+         p {
+            font-size: 14.7px;
+            line-height: 18px;
+            padding-right: 25px;
+            &:before {
+               text-indent: -4px;
+            }
+         }
+      }
+   }
+
+   #tab-item-1-section {
+      .person-column{
+         width: 55.3%;
+      }
+   }
+
+   #tab-item-2-section {
+      h2 {
+         margin: 16px 0 0 34px;
+      }
+
+      img {
+         width: 553px;
+         //margin: 45px 0 0 35px;
+      }
+   }
+
+   #tab-item-3-section {
+      h2 {
+         margin: 18px 0 0 35px;
+      }
+
+      img {
+         width: 553px;
+      }
+
+      .text-content {
+         top: 100px;
+      }
+
+      .divider {
+         margin: 11px auto;
+      }
+
+      .study-design {
+         padding-right: 15px;
+      }
+   }
+
+   #tab-item-4-section {
+      img {
+         left: 0;
+         top: 0;
+         position: absolute;
+         width: 294px;
+      }
+
+      .text-wrapper {
+         margin-left: 300px;
+      }
+
+      h2 {
+         margin: 17px 0 0 26px;
+         padding-right: 100px;
+      }
+
+      .quote-text {
+         font-size: 17.5px;
+         line-height: 21px;
+         padding-right: 25px;
+         &:before {
+            @include beforeSign ('“', -9px);
+         }
+         span {
+            color: $color-gray;
+         }
+      }
+
+      .footnote {
+         margin: 47px 0 0 28px;
+         line-height: 13px;
+
+         &.large {
+            padding-right: 62px;
+         }
+
+         &.bottom {
+            margin-top: 8px;
+            padding-right: 35px;
+         }
+
+         .footnote-bottom-first:before {
+            @include beforeSign ('*', -5px);
+         }
+
+         .footnote-bottom-second {
+            margin-top: -2px;
+            display: block;
+         }
+
+         .footnote-bottom-second:before {
+            content: "†";
+            display: inline-block;
+            font-size: 6px;
+            text-indent: -4px;
+            vertical-align: text-bottom;
+         }
+      }
+
+   }
+
+}

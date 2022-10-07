@@ -1,0 +1,138 @@
+@mixin barAnimation($grayH, $blueH) {
+  .bar {
+    transition: all 1s linear;
+  }
+  .bar-gray {
+    height: $grayH;
+  }
+  .bar-blue {
+    height: $blueH;
+  }
+}
+
+.fn-chart {
+   margin: 78px 0 0 35px;
+   position: relative;
+   width: 565px;
+
+   .chart-axis {
+      width: 552px;
+   }
+
+   .callout {
+      left: 359px;
+      position: absolute;
+      opacity: 0;
+      top: 26px;
+      width: 131px;
+   }
+
+   .overflow-content {
+      height: 230px;
+      left: 80px;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      width: 480px;
+   }
+
+   .cycle {
+      position: absolute;
+      height: 100%;
+      width: 65px;
+   }
+
+   .bar {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      bottom: 0;
+      display: flex;
+      height: 0;
+      justify-content: center;
+      position: absolute;
+      transition: all 0s linear;
+      width: 30px;
+
+      p {
+        font-family: $font-avenirnext-medium;
+        font-size: 12px;
+      }
+   }
+
+   .bar-gray {
+     background-color: $color-gray-chart;
+     left: 1px;
+     p {
+       color: $color-gray-chart;
+       margin: -14px 0 0 6px;
+     }
+   }
+
+   .bar-blue {
+     background-color: $color-blue-chart;
+     left: 32px;
+     p {
+       color: $color-blue-chart;
+       font-size: 15px;
+       margin: -15px 0 0 5px;
+     }
+   }
+
+   .cycle-1 {
+     left: 5px;
+   }
+
+   .cycle-2 {
+     left: 139px;
+   }
+
+   .cycle-3 {
+     left: 206px;
+   }
+
+   .cycle-4 {
+     left: 273px;
+   }
+
+   .cycle-5 {
+     left: 340px;
+   }
+
+   .cycle-6 {
+     left: 407px;
+   }
+
+   // Fires Animations
+   &.active {
+
+     .callout {
+       opacity: 1;
+       transition: all 0.5s linear 0.5s;
+     }
+
+     .cycle-1 {
+       @include barAnimation(19px, 19px);
+     }
+
+     .cycle-2 {
+       @include barAnimation(29px, 139px);
+     }
+
+     .cycle-3 {
+       @include barAnimation(18px, 46px);
+     }
+
+     .cycle-4 {
+       @include barAnimation(18px, 29px);
+     }
+
+     .cycle-5 {
+       @include barAnimation(18px, 18px);
+     }
+
+     .cycle-6 {
+       @include barAnimation(58px, 206px);
+     }
+
+   }
+}

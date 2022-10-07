@@ -1,0 +1,33 @@
+.global-popup-links {
+	bottom: 15px;
+	list-style: none;
+	position: absolute;
+	right: 50px;
+	text-transform: uppercase;
+	width: 98px;
+	z-index: 11;
+
+	li {
+		background-color: $color-light-gray;
+		border: 1px solid #e1e1e1;
+		border-radius: 5px;
+		padding: 6px 0;
+		text-align: center;	
+		margin-top: 9px;
+
+		&.patient-profile-popup {
+			background-color: $color-white;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	
+	a {
+		display: block;
+		color: $color-gray;
+		font-size: 8px;
+		font-family: $font-opensans-bold;
+	}
+}

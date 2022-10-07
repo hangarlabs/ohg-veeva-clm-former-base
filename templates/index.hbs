@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Index File</title>
+   <style>
+	   body {
+	      font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+	      font-weight: normal;
+	      color: #666;
+	      background-color: #eee;
+	      line-height: 1.4em;
+	      padding: 0 30px 0px 30px;
+	   }
+	   
+	   #hero {
+	      margin: 38px auto;
+	      max-width: 800px;
+	      min-width: 200px;
+	      text-align: center;
+	      color: #1d66b8;
+	      line-height: 1.2em;
+	   }
+	   
+	   #container {
+	      max-width: 800px;
+	      min-width: 200px;
+	      margin: 20px auto;
+	      border-top: 1px solid #bbb;
+	      border-bottom: 1px solid #bbb;
+	      padding-bottom: 10px;
+	   }
+	   
+	   p {
+	      margin: 0 0 10px 0;
+	      padding: 0 10px;
+	      word-wrap: break-word;
+	   }
+	   
+	   h4 {
+	      color: #222;
+	      margin: 30px 0 0 0;
+	      padding: 0 10px 0 10px;
+	   }
+	   
+	   #directoryList {
+	      list-style: none;
+	      padding-left: 25px;
+	      margin-top: 15px;
+	   }
+	   
+	   li {
+	      margin: 3px 0;
+	      padding-left: 36px;
+	      background-position: left;
+	      background-repeat: no-repeat;
+	      overflow: hidden;
+	   }
+	   
+	   li.folder {
+	      background-image: url(data:image/svg+xml;base64,77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJmdWxsIiB3aWR0aD0iNzYiIGhlaWdodD0iNzYiIHZpZXdCb3g9IjAgMCA3Ni4wMCA3Ni4wMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzYuMDAgNzYuMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgoJPHBhdGggZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2Utd2lkdGg9IjAuMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTSAyMSwzMC4wMDAxTCA1NS45OTk5LDMwLjAwMDFMIDU1Ljk5OTksNTBMIDIxLDUwTCAyMSwzMC4wMDAxIFogTSA1MiwyOEwgMzcsMjhDIDM4LDI1IDM5LjQ5OTksMjQuMDAwMSAzOS40OTk5LDI0LjAwMDFMIDUwLjc1LDI0QyA1MS4zMDIzLDI0IDUyLDI0LjY5NzcgNTIsMjUuMjVMIDUyLDI4IFogIi8+Cjwvc3ZnPgo=);
+	      background-size: 34px;
+	   }
+	   
+	   li.file {
+	      background-image: url(data:image/svg+xml;base64,77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJmdWxsIiB3aWR0aD0iNzYiIGhlaWdodD0iNzYiIHZpZXdCb3g9IjAgMCA3Ni4wMCA3Ni4wMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzYuMDAgNzYuMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgoJPHBhdGggZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2Utd2lkdGg9IjAuMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTSAyMiwxOUwgNDMuMjUsMTlMIDU0LDI5Ljc1TCA1NCw1N0wgMjIsNTdMIDIyLDE5IFogTSAyNiwyM0wgMjYsNTNMIDUwLDUzTCA1MCwzNUwgMzgsMzVMIDM4LDIzTCAyNiwyMyBaIE0gNDIsMjMuMjVMIDQyLDMxTCA0OS43NSwzMUwgNDIsMjMuMjUgWiAiLz4KPC9zdmc+Cg==);
+	      background-size: 34px;
+	   }
+	   
+	   a { text-decoration: none; }
+	   a:hover { text-decoration: underline; }
+	   .folder a { font-weight: bold; }
+	   .file a { font-weight: 200; }
+   </style>
+</head>
+
+<body>
+   <h1 id='hero'>Veeva Presentation Slide Index</h1>
+   <div id='container'>
+      <h4>Instructions</h4>
+      <p>Use this index file as a table of contents for your presentation slide html files. Pick something from the list below to view.</p>
+      <h4>Folder Contents:</h4>
+      <ul id='directoryList'>
+			{{#each pathArray}}
+			  <li class='file'><a href="{{this}}">{{this}}</a></li>
+			{{/each}}
+		</ul>
+	</div>
+</body>
+
+</html>
+

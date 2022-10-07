@@ -1,0 +1,26 @@
+.mail-button {
+  left: 885px;
+  position: absolute;
+  top: 493px;
+  img {
+    width: 32px !important;
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mail-green {
+    display: none;
+  }
+}
+
+.custom-green-slide .mail-button {
+  .mail-blue {
+    display: none;
+  }
+  .mail-green {
+    display: block;
+  }
+}

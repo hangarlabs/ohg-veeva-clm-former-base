@@ -1,0 +1,22 @@
+.disclaimer,
+.disclaimer-custom {
+   padding: 5px 0 0 52px;
+
+   h4 {
+      margin-top: 8px;
+   }
+
+   p {
+      font-size: 15px;
+      letter-spacing: -0.09px;
+      line-height: 16px;
+      margin-top: 10px;
+      padding-right: 50px;
+      &.small {
+         font-size: 15.2px;
+      }
+      &:last-child {
+         line-height: 6px;
+      }
+   }
+}

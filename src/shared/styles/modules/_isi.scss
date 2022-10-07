@@ -1,0 +1,81 @@
+#ohg-base-example-m-isi, #ohg-base-example-m-isi-intersticial {
+
+   .container {
+      padding: 60px 35px 85px 60px;
+   }
+
+   .isi-scroll {
+      height: 600px;
+      overflow-y: scroll;
+      padding-right: 15px;
+      width: 100%;
+      @include scrollBar();
+   }
+
+   .isi-section {
+      p {
+         color: $color-isi-text;
+         font-family: $font-avenirnext-medium;
+         font-size: 14px;
+
+         &.body {
+            margin-bottom: 12px;
+         }
+
+         strong {
+            font-family: $font-avenirnext-bold;
+         }
+      }
+
+      .title {
+         color: $color-turquoise-secondary;
+         font-family: $font-avenirnext-bold;
+         font-size: 14px;
+         text-transform: uppercase;
+      }
+
+      .pi-link {
+         color: $color-dark-blue-primary;
+         font-size: 14px;
+         margin-top: 48px;
+
+         a {
+            color: $color-dark-blue-primary;
+            font-size: 14px;
+            text-decoration: underline;
+         }
+      }
+   }
+
+   .isi-continue-cta {
+      display: inline-block;
+      float: right;
+      margin-top: 15px;
+      width: 176px;
+
+      img {
+         width: 100%;
+      }
+   }
+
+
+
+   .img-wrapper {
+      margin: 18px 0 0 345px;
+      overflow: hidden;
+      width: 191px;
+      img {
+         width: 306px;
+      }
+   }
+
+   &.hide {
+      display: none;
+   }
+}
+
+#ohg-base-example-m-isi-intersticial {
+   .pi-link {
+      float: left;
+   }
+}

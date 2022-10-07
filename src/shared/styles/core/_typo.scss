@@ -1,0 +1,87 @@
+// Typo
+// -------------------------
+
+h1,
+h2,
+h3,
+h4 {
+   margin: 0;
+   font-weight: normal;
+}
+
+h1,
+.h1 {
+   font-size: 24.4px;
+   color: $color-blue-primary;
+   font-family: $font-avenirnext-medium;
+   line-height: 29px;
+}
+
+h2,
+.h2 {
+   font-size: 25px;
+   color: $color-green-primary;
+   font-family: $font-avenirnext-medium;
+   line-height: 30px;
+   letter-spacing: 0;
+}
+
+h3,
+.h3 {
+   font-size: 23.8px;
+   color: $color-blue-primary;
+   font-family: $font-avenirnext-medium;
+}
+
+h4,
+.h4 {
+   font-size: 19px;
+   color: $color-blue-primary;
+   font-family: $font-avenirnext-medium;
+   line-height: 0;
+}
+
+p,
+.p {
+   font-size: 15px;
+   color: $color-gray;
+   font-family: $font-opensans-regular;
+   line-height: 19px;
+   margin: 0;
+}
+
+a,
+.a {
+   font-size: 18px;
+   color: $color-teal;
+   font-family: $font-opensans-regular;
+}
+
+.study-design {
+   font-size: 12.3px;
+   color: $color-gray;
+   line-height: 14.7px;
+   word-spacing: -1px;
+   .study-design-title {
+      color: $color-blue-secondary;
+      font-family: $font-avenirnext-medium;
+   }
+   .study-design-small {
+      font-size: 10px;
+      display: block;
+      margin-top: 12px;
+   }
+}
+
+.crosslink {
+   a {
+      font-family: $font-avenirnext-bold;
+      font-size: 14px; 
+      color: $color-gray;
+   }
+}
+
+.footnote {
+   font-size: 10px;
+   color: $color-gray;
+}

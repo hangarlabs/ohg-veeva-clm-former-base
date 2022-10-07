@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>veeva-slide</title>
+
+	<!-- build:css ../shared/styles/main.css -->
+	<!-- inject:css -->
+	<!-- endinject -->
+   <link rel="stylesheet" href="../shared/styles/main.css">
+   <!-- endbuild -->
+   <!-- build:css assets/styles/slide.css -->
+   <link rel="stylesheet" href="assets/styles/slide.css" />
+   <!-- endbuild -->
+</head>
+
+<body>
+<main id="ohg_base_second_example" class="slide">
+  <div class="logo">
+    <a href="veeva:gotoSlide(ohg_base_second_example.zip)">
+      <img src="../shared/images/brand_logo.png" alt="Brand">
+    </a>
+  </div>
+
+   <!-- Side Nav  - Global Component -->
+   {{> global-navigation }}
+
+	<!-- Page Body -->
+
+	<section class="global-content">
+    <div class="wrapper">
+      <!-- Components here -->
+      Esto es un ejemplo de contenido
+    </div>
+    <!-- Pop Ups here-->
+    {{> isi }}
+    {{> pi }}
+
+    {{> global-isi }}
+	</section>
+
+</main>
+</body>
+
+<!-- build:js ../shared/scripts/main.js -->
+<!-- inject:js -->
+<script src="../../node_modules/fastclick/lib/fastclick.js"></script>
+<script src="../../node_modules/gsap/TweenMax.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.js"></script>
+<!-- endinject -->
+<script src="../shared/scripts/fastclick.js"></script>
+<script src="../shared/scripts/jquery.js"></script>
+<script src="../shared/scripts/hammer.min.js"></script>
+<script src="../shared/scripts/main.js"></script>
+<!-- endbuild -->
+
+<!-- build:js assets/scripts/slide.js -->
+<script src="assets/scripts/slide.js"></script>
+<!-- endbuild -->
+
+</html>

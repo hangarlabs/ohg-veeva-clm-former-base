@@ -1,0 +1,34 @@
+#ohg-base-example-m-ref {
+
+	.ref-content {
+		padding: 46px 55px 0 58px;
+	}
+
+  .ref-title {
+    margin-bottom: 29px;
+
+    p {
+       color: $color-ref-text;
+       font-family: $font-avenirnext-bold;
+       font-size: 14px;
+       text-transform: uppercase;
+    }
+  }
+
+  .ref-list {
+  	color: $color-ref-text;
+		font-family: $font-avenirnext-bold;
+		font-size: 14px;
+		padding-left: 25px;
+
+		li {
+			margin-bottom: 7px;
+		}
+
+		span {
+			font-family: $font-avenirnext-medium;
+			letter-spacing: -0.01em;
+		}
+  }
+
+}

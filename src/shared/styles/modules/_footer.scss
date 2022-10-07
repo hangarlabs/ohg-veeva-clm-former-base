@@ -1,0 +1,58 @@
+   footer {
+   position: absolute;
+   width: 100%;
+   bottom: 0;
+   height: 47px;
+      background: $color-blue-primary;
+
+   ul {
+      display: flex;
+      list-style: none;
+      height: 100%;
+      li {
+         @include displayFlex();
+         justify-content: center;
+         border-right: 1px solid $color-white;
+         height: 100%;
+         a {
+           @include displayFlex();
+            color: $color-white;
+            font-family: $font-avenirnext-medium;
+            font-size: 13px;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+         }
+      }
+   }
+
+   .arrow{
+      width: 53px;
+   }
+
+   .home {
+      width: 97px;
+   }
+
+   .prescribing-information {
+      width: 236px;
+   }
+
+   .instructions-for-use {
+      width: 208px;
+   }
+
+   .important-safety-information {
+      width: 284px;
+   }
+
+   .references {
+      border: none;
+      width: 146px;
+      &.inactive {
+         background: $color-inactive-gray;
+         pointer-events: none;
+      }
+   }
+
+}

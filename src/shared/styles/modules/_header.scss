@@ -1,0 +1,38 @@
+header {
+   display: flex;
+   padding: 26px 0 0 0;
+   height: 115px;
+
+   .header-gradient,
+   h1 {
+      padding-top: 10px;
+   }
+
+   h1 {
+      margin-left: 21px;
+      width: 71.3%;
+      &.full-title {
+         width: 100%;
+      }
+      &.full {
+         width: 61.5%;
+      }
+   }
+
+   .header-gradient {
+      max-height: 67px;
+   }
+
+   .header-logo {
+      width: 307px;
+      margin-top: -3px;
+   }
+
+   .logo-container {
+      overflow: hidden;
+      width: 190px;
+      &.full {
+         width: 300px;
+      }
+   }
+}

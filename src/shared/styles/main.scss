@@ -1,0 +1,133 @@
+@import "core/variables";
+@import "core/fonts";
+@import "core/typo";
+
+@import "helpers/mixins";
+@import "helpers/utils";
+
+// @import "modules/double-bar-chart";
+// @import "modules/disclaimer";
+// @import "modules/fn-chart";
+// @import "modules/footer";
+// @import "modules/header";
+@import "modules/isi";
+@import "modules/pi";
+@import "modules/ref"; 
+@import "modules/global-isi";
+@import "modules/global-popups";
+// @import "modules/mail"/;
+// @import "modules/patient";
+// @import "modules/patient-modules";
+@import "modules/popup";
+// @import "modules/redirect";
+// @import "modules/table-of-contents";
+@import "modules/sidenav";
+@import "modules/global-nav";
+@import "modules/tabs";
+// @import "modules/video-popup";
+@import "modules/tooltips";
+@import "modules/crosslink";
+
+/* inject:scss */ 
+/* endinject */
+
+/********** CLEAR VALUES *********/
+
+* { padding: 0; margin: 0; box-sizing:border-box; }
+a img { border: none; }
+a { text-decoration: none; outline: 0; }
+sup {
+	position:relative;
+	top:-0.5em;
+	font-size: 0.65em;
+	line-height: 0.5em;
+	vertical-align:baseline;
+}
+img { display:block; }
+
+
+/********** CLASS STYLES *********/
+
+/*layout helper classes*/
+.fr { float: right; }
+.fl { float: left; }
+.cf { clear:both !important; }
+.u { text-decoration: underline; }
+.c { text-align: center; }
+.uc { text-transform: uppercase; }
+.lc { text-transform: lowercase; }
+.no-bottom { margin-bottom:0 !important; }
+.bottom10 { margin-bottom:10px !important; }
+
+
+/********** STRUCTURE *********/
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0,0,0,0); //hide ipad highlight tint
+	//font rendering
+	font-smoothing: antialiased;
+	height: 100%;
+	width: $sw;
+  overflow: auto;
+}
+
+/********** GLOBAL CLASS STYLES *********/
+
+.slide {
+	position:relative; top:0; left:0;
+	width:$sw; height:$sh;
+	overflow:hidden;
+	background: url('../images/background.jpg') right 0 no-repeat;
+	background-size: contain;
+
+	.logo {
+		position: absolute;
+		top: 23px;
+		right: 30px;
+		width: 132px;
+		z-index: 2;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.wrapper {
+		height: 606px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 955px;
+	}	
+
+	.iscroll-wrapper {
+		position: relative;
+		overflow:hidden;
+
+		.iscroll-content {
+			display:inline-block;
+			list-style:none;
+		}
+		//custom scrollbar styles
+		.iScrollVerticalScrollbar {
+			position:absolute;
+			top:2px; right:0px; bottom:2px;
+			width:6px;
+			background-color:#dbdbdb;
+			border-radius:3px;
+		}
+		//custom scrollbar thumb styles
+		.iScrollIndicator {
+			position:absolute;
+			top:0; right:0;
+			width:6px;
+			border-radius:3px;
+			background-color:#898989;
+		}
+	}
+}

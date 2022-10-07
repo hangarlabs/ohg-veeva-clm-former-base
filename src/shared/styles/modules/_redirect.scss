@@ -1,0 +1,24 @@
+.redirect {
+   align-items: center;
+   background: $color-green-primary;
+   border-bottom-right-radius: 15px;
+   border-top-left-radius: 20px;
+   bottom: 0;
+   display: flex;
+   height: 42px;
+   justify-content: center;
+   position: absolute;
+   right: 0;
+   width: 108px;
+   z-index: 2;
+   &:active,
+   &:focus,
+   &:hover {
+      text-decoration: none;
+   }
+   p {
+      color: $color-white;
+      font-family: $font-avenirnext-medium;
+      margin: 2px 0 0 5px;
+   }
+}

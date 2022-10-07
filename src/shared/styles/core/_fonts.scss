@@ -1,0 +1,87 @@
+//
+// Typography
+// --------------------------------------------------
+
+$font-url: "../../../shared/fonts";
+
+@font-face {
+    font-family: '#{$font-avenirnext-bold}';
+    src: url('#{$font-url}/#{$font-avenirnext-bold}.eot');
+    src: url('#{$font-url}/#{$font-avenirnext-bold}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-avenirnext-bold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-avenirnext-bold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-avenirnext-bold}.svg##{$font-avenirnext-bold}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-avenirnext-medium}';
+    src: url('#{$font-url}/#{$font-avenirnext-medium}.eot');
+    src: url('#{$font-url}/#{$font-avenirnext-medium}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-avenirnext-medium}.woff') format('woff'),
+         url('#{$font-url}/#{$font-avenirnext-medium}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-avenirnext-medium}.svg##{$font-avenirnext-medium}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-avenirnext-medium-italic}';
+    src: url('#{$font-url}/#{$font-avenirnext-medium-italic}.eot');
+    src: url('#{$font-url}/#{$font-avenirnext-medium-italic}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-avenirnext-medium-italic}.woff') format('woff'),
+         url('#{$font-url}/#{$font-avenirnext-medium-italic}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-avenirnext-medium-italic}.svg##{$font-avenirnext-medium-italic}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-avenirnext-demibold}';
+    src: url('#{$font-url}/#{$font-avenirnext-demibold}.eot');
+    src: url('#{$font-url}/#{$font-avenirnext-demibold}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-avenirnext-demibold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-avenirnext-demibold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-avenirnext-demibold}.svg##{$font-avenirnext-demibold}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-opensans-regular}';
+    src: url('#{$font-url}/#{$font-opensans-regular}.eot');
+    src: url('#{$font-url}/#{$font-opensans-regular}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-opensans-regular}.woff') format('woff'),
+         url('#{$font-url}/#{$font-opensans-regular}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-opensans-regular}.svg##{$font-avenirnext-demibold}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-opensans-semibold}';
+    src: url('#{$font-url}/#{$font-opensans-semibold}.eot');
+    src: url('#{$font-url}/#{$font-opensans-semibold}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-opensans-semibold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-opensans-semibold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-opensans-semibold}.svg##{$font-avenirnext-demibold}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-opensans-italic}';
+    src: url('#{$font-url}/#{$font-opensans-italic}.eot');
+    src: url('#{$font-url}/#{$font-opensans-italic}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-opensans-italic}.woff') format('woff'),
+         url('#{$font-url}/#{$font-opensans-italic}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-opensans-italic}.svg##{$font-avenirnext-demibold}') format('svg');
+}
+
+@font-face {
+    font-family: '#{$font-opensans-bold}';
+    src: url('#{$font-url}/#{$font-opensans-bold}.eot');
+    src: url('#{$font-url}/#{$font-opensans-bold}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-opensans-bold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-opensans-bold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-opensans-bold}.svg##{$font-avenirnext-demibold}') format('svg');
+}
+
+
+@font-face {
+    font-family: '#{$font-opensans-extrabold}';
+    src: url('#{$font-url}/#{$font-opensans-extrabold}.eot');
+    src: url('#{$font-url}/#{$font-opensans-extrabold}.eot') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-opensans-extrabold}.woff') format('woff'),
+         url('#{$font-url}/#{$font-opensans-extrabold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$font-opensans-extrabold}.svg##{$font-avenirnext-demibold}') format('svg');
+}

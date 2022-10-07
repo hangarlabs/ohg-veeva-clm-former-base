@@ -1,0 +1,243 @@
+
+/********** IMAGES *********/
+
+//apply retina background image
+@mixin at2x($path, $w: auto, $h: auto) {
+  background-image: url("#{$path}");
+  background-size: $w $h;
+}
+
+
+/********** BUTTONS *********/
+
+//position required
+@mixin tint-button($color:black, $amount:0.2, $duration:0.3s, $acitve_only:false) {
+  overflow:hidden;
+
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0; left:0;
+    width:inherit;
+    height:inherit;
+    background-color: $color;
+    @include opacity(0);
+    @include transition (opacity $duration);
+    @include border-radius(inherit);
+  }
+
+  @if $acitve_only == true {
+    &:active {
+      overflow:hidden;
+      &:after {
+        @include opacity($amount);
+      }
+    }
+  } @else {
+    &:hover, &:active {
+      &:after {
+        @include opacity($amount);
+      }
+    }
+  }
+}
+
+
+/********** LAYOUT *********/
+
+// clear floats
+%clearfix {
+    &:before,
+    &:after { content: ""; display: table; }
+    &:after { clear: both; }
+}
+
+
+/********** LAYOUT STYLES *********/
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+// hide content visisbly and functionally without removing from dom
+%display-hide {
+  width:0px; height:0px;
+  opacity:0;
+  overflow:hidden;
+}
+
+// Table of Content Item Style
+@mixin item-creator-menu($background-color, $border-color, $text-color) {
+   background-color: $background-color;
+   border: 1px solid $border-color;
+   p {
+      color: $text-color;
+      line-height: 14px;
+      margin: 0;
+   }
+}
+
+@mixin displayFlex () {
+   display: flex;
+   align-items: center;
+}
+
+@mixin beforeSign ($sign, $text-indent) {
+   content: $sign;
+   display: inline-block;
+   text-indent: $text-indent;
+}
+
+// Sidenav icon styles
+@mixin sideNavIcon ($margin-top, $margin-left, $icon-height, $icon-width, $bg-position ) {
+      margin-top: $margin-top;
+      margin-left: $margin-left;
+
+      .icon {
+        background-position: $bg-position;
+        height: $icon-height;
+        width: $icon-width; 
+      }
+}
+
+@mixin navActiveState (){ 
+  .icon {
+    background-position-y: -37px; 
+  }
+}
+
+
+/********** Typography *********/
+
+//font size converts to rem with px fallback
+@mixin font-size($size: 12, $base: 16) {
+  font-size: $size + px; // fallback for old browsers
+  font-size: ($size / $base) * 1rem;
+}
+
+//line height converts to rem with px fallback
+@mixin line-height($heightValue: 12, $base: 16) {
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: ($heightValue / $base) + rem;
+}
+
+// truncate paragraph with ellipsis
+%text-truncate {
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/********** COLOR ************/
+@mixin brandGradientBg() {
+  background: linear-gradient(to right, #00A37C 30%, #008C9B 50%);
+}
+
+
+/********** ANIMATION *********/
+
+// CSS3 fade alpha and visibility
+%auto-alpha-keyframes {
+  @-webkit-keyframes anim-alpha-in {
+    0% { opacity:0; }
+    100% { opacity:1; }
+  }
+
+  @-webkit-keyframes anim-auto-alpha-out {
+    0% { opacity:1; }
+    100% {
+      opacity:0;
+      visibility:hidden;
+    }
+  }
+}
+
+// CSS3 fade in
+@mixin fade-in($duration) {
+  -webkit-animation: anim-alpha-in $duration forwards ease-in-out;
+}
+
+// CSS3 fade out
+@mixin fade-out($width, $height, $duration) {
+  -webkit-animation: anim-auto-alpha-out $duration forwards ease-in-out;
+}
+
+//Scroll bar style
+@mixin scrollBar() {
+  &::-webkit-scrollbar {
+    background-color: #efefef;
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #c6c6c6;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #efefef;
+  }
+}
+
+
+/********** MOBILE SPECIFIC *********/
+
+//gpu accelleration for mobile devices
+%gpu {
+   transform: translateZ(0);
+}

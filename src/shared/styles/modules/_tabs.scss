@@ -1,0 +1,17 @@
+.tabs {
+   list-style: none;
+   position: absolute;
+   right: 0;
+   top: 237px;
+   z-index: 2;
+
+   li {
+      height: 58px;
+      width: 50px;
+
+      a {
+         display: block;
+         height: 100%;
+      }
+   }
+}

@@ -1,0 +1,138 @@
+
+//double bar chart styles in neulasta_icva_2_1, neulasta_icva_4_1, neulasta_icva_4_2
+
+/*
+use this code snipit on particular slide.css and adjust values to match each chart:
+
+#chart-id {
+   background-image: url(../images/chart-1.png); //chart labels and lines
+
+   .chart-col:nth-of-type(1) {
+      height:200px;
+      .bar.green { height:93%; }
+      .bar.blue { height:5%; }
+   }
+   .chart-col:nth-of-type(2) {
+      height:172px;
+      .bar.green { height:91%; }
+      .bar.blue { height:6%; }
+   }
+   .chart-col:nth-of-type(3) {
+      height:118px;
+      .bar.green { height:81%; }
+      .bar.blue { height:14%; }
+   }
+}
+*/
+
+.double-bar-chart {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 278px;
+  margin: 66px 0 0 0;
+  padding-left: 38px;
+  position: relative;
+  width: 551px;
+
+  .column-wrapper {
+    height: 87%;
+    overflow: hidden;
+    position: absolute;
+    top: -2px;
+    width: 105%;
+  }
+
+   .chart-col {
+      position:absolute;
+      bottom:0;
+      width:96px;
+      height:240px;
+
+      &:nth-of-type(1) { left:68px; }
+      &:nth-of-type(2) { left:232px; }
+      &:nth-of-type(3) { left:398px; }
+
+      .bar {
+         position:absolute;
+         width:45px;
+         //border:1px solid blue;
+
+         &.gray {
+            left:0;
+            bottom:0;
+            height:100%;
+            border-top-left-radius:6px;
+            border-top-right-radius:6px;
+            background-color:$color-gray;
+
+            p {
+               margin-top:5px;
+               text-align: center;
+               font-weight: bold;
+               color:white;
+            }
+         }
+         &.green {
+            top:0;
+            right:0;
+            height:70%;
+            background-color: $color-green-primary;
+
+            .label {
+               position:absolute;
+               top:0;
+               left:110%;
+               p,h2 { color:$color-blue-primary; }
+               h2 {
+                  margin:-5px 0 0 0 !important;
+                  padding:0 !important;
+                  font-weight:bold;
+                  font-size:16px;
+                  height:20px;
+               }
+               p { font-size:13px; }
+
+               &.big {
+                  background-color:$color-blue-primary;
+                  padding:3px;
+                  border-radius:4px;
+                  transform:translateY(-100%);
+                  p,h2 {
+                     font-weight:bold;
+                     color:white;
+                     line-height: 1;
+                  }
+                  h2 {
+                     margin:0 !important;
+                     font-size:21px;
+                  }
+               }
+            }
+
+            .arrow {
+               position:absolute;
+               bottom:0;
+               width:100%;
+               height:12px;
+               border-top:12px solid $color-green-primary;
+               border-left:22.5px solid $color-green-tertiary;
+               border-right:22.5px solid $color-green-tertiary;
+            }
+         }
+         &.blue {
+            bottom:0;
+            right:0;
+            border-top-left-radius:6px;
+            border-top-right-radius:6px;
+            background-color:$color-blue-primary;
+            p {
+               position:absolute;
+               top:-5px;
+               left:110%;
+               color:$color-blue-primary;
+               font-weight:bold;
+            }
+         }
+      }
+   }
+}

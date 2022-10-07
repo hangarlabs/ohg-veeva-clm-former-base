@@ -1,0 +1,83 @@
+{
+  "name": "neulasta_icva",
+  "version": "1.0.0",
+  "jonNumbers": [
+    "PEGT16AGRX4821"
+  ],
+  "private": true,
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.2.1",
+    "browserify": "^13.1.1",
+    "del": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^6.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-eslint": "^0.13.2",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-newer": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-tap": "^0.1.3",
+    "gulp-uglify": "^1.1.0",
+    "gulp-useref": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "merge-stream": "^1.0.0",
+    "minimist": "^1.2.0",
+    "node-cmd": "^1.1.1",
+    "node-notifier": "^4.6.1",
+    "nodemailer": "^2.4.2",
+    "vinyl-ftp": "^0.5.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "fastclick": "^1.0.6",
+    "gsap": "^1.18.5",
+    "jquery": "2.x"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ],
+      "strict": true,
+      "no-mixed-spaces-and-tabs": true,
+      "no-trailing-spaces": true,
+      "no-unused-vars": true,
+      "eol-last": true,
+      "key-spacing": true,
+      "space-infix-ops": true,
+      "comma-spacing": true,
+      "no-undef": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#ohg-base-example-m-pi {
+
+   .container {
+      padding: 60px 35px 85px 60px;
+   }
+
+   .pi-scroll {
+      height: 600px;
+      overflow-y: scroll;
+      padding-right: 50px;
+      width: 100%;
+      @include scrollBar();
+   }
+
+   .pi-title {
+      margin-bottom: 22px;
+
+      p {
+         color: $color-turquoise-secondary;
+         font-family: $font-avenirnext-bold;
+         font-size: 14px;
+         text-transform: uppercase;
+      }
+   }
+
+   .pi-body {
+      img {
+         width: 100%;
+      }
+   }
+
+}
